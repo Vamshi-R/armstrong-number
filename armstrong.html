@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function armstrong(){
+            //create input
+            let sum = 0
+            let number = document.getElementById("demo").value
+            //create temporaray variable
+            let temp = number
+
+            while(temp >0 ){
+                let remainder = temp % 10;
+                sum+=remainder * remainder * remainder
+                temp=parseInt(temp/10) //converting float into integer
+            }
+
+            if(sum == number){
+                alert("armstrong number")
+            }
+            else{
+                alert("not armstrong number")
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    value:<input type = "text" id = "demo"><br><br>
+    <button id = "btn1" onclick="armstrong()">click</button>
+</body>
+</html>
